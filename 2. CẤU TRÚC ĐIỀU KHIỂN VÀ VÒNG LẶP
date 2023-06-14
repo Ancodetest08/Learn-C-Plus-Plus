@@ -1,0 +1,65 @@
+#include <iostream>
+#include <math.h>
+
+int main() {
+    
+	if (true) {
+		std::cout << "Điều kiện đúng" << std::endl;
+	} else {
+		std::cout << "Điều kiện sai" << std::endl;
+	}
+
+	int month;
+	try_again:
+	std::cout << "Nhập tháng: "; std::cin >> month;
+	switch (month) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			std::cout << "31 ngày" << std::endl;
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			std::cout << "30 ngày" << std::endl;
+			break;
+		case 2:
+			std::cout << "28 ngày" << std::endl;
+			break;
+		default:
+			goto try_again;
+	}
+
+	int x = 2;
+	int y = (x % 2 == 0 ? 0 : 1);
+	int s = 0;
+
+	for (x = 1; x <= 10; x++) {
+		s += pow(x, 2);
+	}
+
+	while (y <= 10) {
+		std::cout << y << std::endl;
+		if (y == 8) {
+			break;
+		}
+		y++;
+	}
+
+	do {
+		if (x == 5) {
+			x--;
+			continue;
+		}
+		std::cout << x << std::endl;
+		x--;
+	} while (x >= 0);
+
+	return 0;
+
+}
