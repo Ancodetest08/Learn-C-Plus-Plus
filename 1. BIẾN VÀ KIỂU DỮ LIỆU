@@ -4,7 +4,14 @@
 #define DIEM_CHUAN 27.25
     
 int main() {
-        
+
+	/* Comment in many lines Line 1
+	Line 2
+	...
+	*/
+	
+	// Comment in one line
+
 	int a = 1;
 	float b = 1.5;
 	double c = 3.45;
