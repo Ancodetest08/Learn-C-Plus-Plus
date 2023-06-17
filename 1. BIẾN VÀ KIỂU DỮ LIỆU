@@ -5,13 +5,6 @@
     
 int main() {
 
-	/* Comment in many lines Line 1
-	Line 2
-	...
-	*/
-	
-	// Comment in one line
-
 	int a = 1;
 	float b = 1.5;
 	double c = 3.45;
@@ -25,26 +18,26 @@ int main() {
 	std::cout << "Hello World!\n";
 	
 	std::cout << "Nhập a = "; std::cin >> a;
-	std::cout << "Giá trị a = " << a;
+	std::cout << "Giá trị a = " << a << std::endl;
 	
-	std::cout << "a / 2 = " << (float)a / 2;
+	std::cout << "a / 2 = " << (float)a / 2 << std::endl;
 	
-	std::cout << "Trị tuyệt đối của a = " << abs(a);
-	std::cout << "Căn bậc hai của a = " << sqrt(a);
-	std::cout << "Luỹ thừa của a và b = " << pow(a, b);
+	std::cout << "Trị tuyệt đối của a = " << abs(a) << std::endl;
+	std::cout << "Căn bậc hai của a = " << sqrt(a) << std::endl;
+	std::cout << "Luỹ thừa của a và b = " << pow(a, b) << std::endl;
 
-	std::cout << "Min int: " << INT_MIN;
-	std::cout << "Max int: " << INT_MAX;
-	std::cout << "Min short: " << SHRT_MIN;
-	std::cout << "Max short: " << SHRT_MAX;
-	std::cout << "Min long: " << LONG_MIN;
-	std::cout << "Max long: " << LONG_MAX;
+	std::cout << "Min int: " << INT_MIN << std::endl;
+	std::cout << "Max int: " << INT_MAX << std::endl;
+	std::cout << "Min short: " << SHRT_MIN << std::endl;
+	std::cout << "Max short: " << SHRT_MAX << std::endl;
+	std::cout << "Min long: " << LONG_MIN << std::endl;
+	std::cout << "Max long: " << LONG_MAX << std::endl;
 
-	std::cout << "Int: " << sizeof(int);
-	std::cout << "Float: " << sizeof(float);
-	std::cout << "Double: " << sizeof(double);
-	std::cout << "Char: " << sizeof(char);
-	std::cout << "Bool: " << sizeof(bool);
+	std::cout << "Int: " << sizeof(int) << std::endl;
+	std::cout << "Float: " << sizeof(float) << std::endl;
+	std::cout << "Double: " << sizeof(double) << std::endl;
+	std::cout << "Char: " << sizeof(char) << std::endl;
+	std::cout << "Bool: " << sizeof(bool) << std::endl;
     
 	return 0;
 
