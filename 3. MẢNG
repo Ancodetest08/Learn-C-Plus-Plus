@@ -2,14 +2,14 @@
 
 int main() {
 
-	int numbers_one[5] = {1,2,3,4,5};
+	int numbers_one[5] = {1, 2, 3, 4, 5};
 	int numbers_two[10][10] = {
-		{1,2,3}
-		{4,5,6}
+		{1, 2, 3}
+		{4, 5, 6}
 	}; 
 
-	std::cout << numbers_one[1];
-	std::cout << numbers_two[2][2];
+	std::cout << numbers_one[1] << std::endl;
+	std::cout << numbers_two[2][2] << std::endl;
 
 	return 0;
 
