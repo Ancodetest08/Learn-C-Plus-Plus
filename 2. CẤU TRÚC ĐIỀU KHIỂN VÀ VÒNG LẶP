@@ -3,9 +3,9 @@
 int main() {
     
 	if (true) {
-		std::cout << "Điều kiện đúng";
+		std::cout << "Điều kiện đúng" << std::endl;
 	} else {
-		std::cout << "Điều kiện sai";
+		std::cout << "Điều kiện sai" << std::endl;
 	}
 
 	int month;
@@ -21,16 +21,16 @@ int main() {
 		case 8:
 		case 10:
 		case 12:
-			std::cout << "31 ngày";
+			std::cout << "31 ngày" << std::endl;
 			break;
 		case 4:
 		case 6:
 		case 9:
 		case 11:
-			std::cout << "30 ngày";
+			std::cout << "30 ngày" << std::endl;
 			break;
 		case 2:
-			std::cout << "28 ngày";
+			std::cout << "28 ngày" << std::endl;
 			break;
 		default:
 			goto try_again;
@@ -41,11 +41,11 @@ int main() {
 	int s = 0;
 
 	for (x = 1; x <= 10; x++) {
-		std::cout << x;
+		std::cout << x << std::endl;
 	}
 
 	while (y <= 10) {
-		std::cout << y;
+		std::cout << y << std::endl;
 		if (y == 8) {
 			break;
 		}
@@ -57,7 +57,7 @@ int main() {
 			x--;
 			continue;
 		}
-		std::cout << x;
+		std::cout << x << std::endl;
 		x--;
 	} while (x >= 0);
 
