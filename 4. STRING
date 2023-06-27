@@ -1,8 +1,15 @@
 #include <iostream>
+#include <string>
 
 int main() {
 
-	
+	string str = "Hello World";
+
+	int n;
+	std::cin >> n;
+	cin.ignore();
+
+	getline(cin, str);
 
 	return 0;
  
