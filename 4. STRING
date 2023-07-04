@@ -4,6 +4,9 @@
 int main() {
 
 	string str = "Hello World";
+	string str1 = "C++";
+	string str2 = "Hello World";
+	string str3 = "World";
 
 	int n;
 	std::cin >> n;
@@ -11,6 +14,19 @@ int main() {
 
 	getline(cin, str);
 
+	str.substr(2, 5);				# llo W
+	str.substr(3);					# lo World
+	str.find("llo");				# 2
+	str.erase(2, 3);				# str = "He World"
+	str.replace(1, 2, "***");		# str = "H***lo World"
+	str.compare(str1);				# -1
+	str.compare(str2);				# 0
+	str.compare(str3);				# 1
+	str.insert(1, "**");			# str = "H**ello World"
+	str.length();					# 11
+	str.size();						# 11
+	tolower(str);					# hello world
+	
 	return 0;
  
 }
