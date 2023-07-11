@@ -1,1 +1,20 @@
+#include <iostream>
+#include <string>
 
+void print_message(string message) {
+	std::cout << "Message: " << message << std::endl;
+}
+
+int sum(int a, int b) {
+	int c = a + b;
+	return c;
+}
+
+int main() {
+
+	print_message("Hello Cac Ban.");
+	std::cout << sum(1, 2) <<std::endl;
+
+	return 0;
+
+}
