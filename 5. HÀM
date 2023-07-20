@@ -16,13 +16,7 @@ void input_integer(string label, const int &x) {
 	std::cout << x << std::endl;
 }
 
-float avg(int arr[], int n) {
-	int sum = 0;
-	for (int i = 0; i < n; i++) {
-		sum += arr[i];
-	}
-	return (float)sum / n;
-}
+float avg(int, int);
 
 void function_a(int a, int b = 1) {
 	std::cout << "a = " << a << std::endl;
@@ -36,4 +30,12 @@ int main() {
 
 	return 0;
 
+}
+
+float avg(int arr[], int n) {
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum += arr[i];
+	}
+	return (float)sum / n;
 }
