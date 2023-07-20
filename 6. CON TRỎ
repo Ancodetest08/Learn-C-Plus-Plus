@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void input_integer(int *x) {
+	cin >> *x;
+ }
+
+int main() {
+
+ 	int x;
+	int n = 5;
+	int *i_ptr = &n;
+ 
+ 	cout << &n <<endl;				// 0x6ffe14
+  	cout << i_ptr <<endl;			// 0x6ffe14
+   	cout << *i_ptr <<endl;			// 5
+
+	input_integer(&x);
+
+	return 0;
+
+ }
