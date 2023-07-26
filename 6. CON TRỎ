@@ -1,3 +1,43 @@
+// Đối tượng lưu trữ
+	// Stack: lưu trữ các biến cục bộ
+	// Heap: lưu trữ các biến toàn cục, các đối tượng của con trỏ khi được cấp phát động
+	
+	/* Stack:
+		#include <iostream>
+
+		int main() {
+
+			int a = 4;
+			int b[5];
+
+			return 0;
+
+		}
+	*/
+
+	/* Heap:
+		#include <iostream>
+
+		int main() {
+
+			float *a = new float(4.5);
+			int *b = new int[3];
+
+			delete a;
+			delete[] b;
+
+			a = new float(3.4);
+		
+			return 0;	
+
+		}
+	*/
+
+	// Tốc độ truy suất:
+		// Stack có tốc độ truy suất nhanh hơn Heap
+	// Giới hạn lưu trữ:
+		// Stack có giới hạn lưu trữ nhỏ hơn Heap
+
 #include <iostream>
 
 using namespace std;
@@ -8,36 +48,6 @@ void input_integer(int *x) {
 
 int main() {
 
-	// Đối tượng lưu trữ
-		// Stack: lưu trữ các biến cục bộ
-		// Heap: lưu trữ các biến toàn cục, các đối tượng của con trỏ khi được cấp phát động
-	/* Stack:
-	#include <iostream>
-
-	int main() {
-		int a = 4;
-		int b[5];
-
-		return 0;
-	}
-	*/
-	/* Heap:
-	#include <iostream>
-
-	int main() {
-		float *a = new float(4.5);
-
-		delete a;
-
-		a = new float(3.4);
-		
-		return 0;	
-	}
-	*/
-	// Tốc độ truy suất:
-		// Stack có tốc độ truy suất nhanh hơn Heap
-	// Giới hạn lưu trữ:
-		// Stack có giới hạn lưu trữ nhỏ hơn Heap
  	int x;
 	int n = 5;
 	int *i_ptr = &n;
