@@ -1,8 +1,57 @@
 #include <iostream>
+#include <string>
 
 using namespaces std;
 
+struct Date {
+	int date;
+	int month;
+	int year;
+
+	Date() {
+	}
+	Date(int _date, int _month, int _year) {
+		date = _date;
+		month = _month;
+		year = _year;
+	}
+}
+
+struct Student {
+	// Properties
+	string name;
+	int age;
+	Date dob;
+
+	// Constructor
+	Student() {
+		cout << "Hàm khởi tạo chạy." <<endl;
+	}
+
+	// Methods
+	void run() {
+		cout << "Running..." <<endl;	
+	}
+}
+
 int main() {
+
+	Student students[10] = {
+		Student("Long", 18, Date(1, 1, 2000)),
+		Student("Duy", 20, Date(2, 3, 2001))
+	};
+	Student student_1;
+	Student student_2{"An", 18};
+	Student student_3 = Student{"An", 18};
+
+	cout << "Nhập tên: ";
+	getline(cin, student_1.name);
+	cout << "Nhập tuổi: ";
+	cin >> student_1.age;
+
+	student_1.run();
+	cout << "Tên: " << student_1.name <<endl;
+	cout << "Tuổi: " << student_1.age <<endl;
 
 	return 0;
 
