@@ -27,6 +27,11 @@ struct Student {
 	Student() {
 		cout << "Hàm khởi tạo chạy." <<endl;
 	}
+	Student(string _name, int _age, Date _dob) {
+		name = _name;
+		age = _age;
+		dob = _dob;
+	}
 
 	// Methods
 	void run() {
@@ -41,8 +46,8 @@ int main() {
 		Student("Duy", 20, Date(2, 3, 2001))
 	};
 	Student student_1;
-	Student student_2{"An", 18};
-	Student student_3 = Student{"An", 18};
+	Student student_2{"An", 18, Date(2, 6, 2003)};
+	Student student_3 = Student{"An", 18, Date(2, 6, 2003)};
 
 	cout << "Nhập tên: ";
 	getline(cin, student_1.name);
