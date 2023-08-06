@@ -48,6 +48,7 @@ int main() {
 	Student student_1;
 	Student student_2{"An", 18, Date(2, 6, 2003)};
 	Student student_3 = Student{"An", 18, Date(2, 6, 2003)};
+	Student *student_ptr = &student_3;
 
 	cout << "Nhập tên: ";
 	getline(cin, student_1.name);
@@ -57,6 +58,9 @@ int main() {
 	student_1.run();
 	cout << "Tên: " << student_1.name <<endl;
 	cout << "Tuổi: " << student_1.age <<endl;
+	
+	cout << student_ptr->name <<endl;
+	cout << (*student_ptr).age <<endl;
 
 	return 0;
 
