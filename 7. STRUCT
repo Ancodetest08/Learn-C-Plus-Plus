@@ -37,6 +37,27 @@ struct Student {
 	void run() {
 		cout << "Running..." <<endl;	
 	}
+
+	friend istream& operator>>(istream &is, Student &p) {
+		cout << "Name: ";
+		is >> p.name;
+		cout << "Age: ";
+		is >> p.age;
+
+		return is;
+	}
+	friend ostream& operator<<(ostream &os, Student p) {
+		os << p.name << " " << p.age <<endl;
+
+		return os;
+	}
+	friend Student operator+(Student p1, Student p2) {
+		Student p3;
+		p3.age = p1.age + p2.age;
+
+		return p3;
+	}
+
 }
 
 int main() {
@@ -48,6 +69,7 @@ int main() {
 	Student student_1;
 	Student student_2{"An", 18, Date(2, 6, 2003)};
 	Student student_3 = Student{"An", 18, Date(2, 6, 2003)};
+	Student student_4 = student_1 + student_2;
 	Student *student_ptr = &student_3;
 
 	cout << "Nhập tên: ";
@@ -61,6 +83,9 @@ int main() {
 	
 	cout << student_ptr->name <<endl;
 	cout << (*student_ptr).age <<endl;
+
+	cin >> student_1;
+	cout << student_1;
 
 	return 0;
 
