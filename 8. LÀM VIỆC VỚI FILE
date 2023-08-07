@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+
+	fstream fs;
+
+  	fs.open("C:\\Users\\an\\Desktop\\cpp_learning\\test.txt");
+   	
+	if (fs.is_open()) {
+		cout << "Mở File thành công" <<endl;
+  	else {
+		cout << "Mở File thất bại" <<endl;
+  	}
+
+   	fs << "Hello World" <<endl;
+
+ 	string str;
+  	getline(fs, str);
+
+   	fs.close();
+
+	return 0;
+ 
+ }
