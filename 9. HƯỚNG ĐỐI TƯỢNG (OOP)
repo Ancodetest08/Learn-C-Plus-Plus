@@ -1,0 +1,154 @@
+#inlude <iostream>
+
+using namespace std;
+
+// Tính đóng gói
+	/*
+ 		class Square {
+   			private:
+	  			float side_length;
+	  		public:
+	 			// Setter
+	 			void set_side_length(float _side_length) {
+	 				side_length = _side_length;
+	  			}
+	  			// Getter
+	  			float get_side_length() {
+	  				return side_length;
+	   			
+	   	}
+	*/
+// Tính kế thừa
+	/*
+ 		class Animal {
+   			public:
+	  			float weight;
+	 			void run() {
+	 				cout << "Animal is running..." <<endl;
+	  			}
+	   	};
+	 	class Cat : public  {
+   			public:
+	  			string name;
+	  			void eat() {
+					cout << "Cat is eating..." <<endl;
+	 			}
+   		};
+	*/
+ 	// Thuộc tính truy cập
+		// Thuộc tính truy cập	Truy cập bên trong class	Truy cập bên ngoài class	Được phép kế thứa
+		// public				Có							Có							Có
+  		// protected			Có							Không						Có
+		// private				Có							Không						Không
+	// Kiểu kế thừa
+		// Kiểu kế thừa public:
+  			// Các thành viên public của lớp cha trở thành các thành viên public của lớp con
+			// Các thành viên protected của lớp cha trở thành các thành viên protected của lớp con
+		// Kiểu kế thừa protected:
+  			// Các thành viên public và protected của lớp cha trở thành các thành viên protected của lớp con
+		// Kiểu kế thừa private:
+  			// Các thành viên public và protected của lớp cha trở thành các thành viên private của lớp
+// Tính đa hình
+	// Nạp chồng
+		// Nạp chồng hàm
+  			/*
+	 			class Calculator {
+					public:
+	 					int add(int a, int b) {
+							return a + b;
+	   					}
+						float add(float a, float b) {
+							return a + b;
+	   					}
+		 		};
+			*/
+		// Nạp chồng toán tử
+    		/*
+	 			class Point {
+					public:
+	 					int x, y;
+	   					Point() {}
+						Point(int x, int y) {
+							this->x = x;
+	   						this->y = y;
+		  				}
+						friend Point operator+(Point p1, Point p2) {
+						
+}
+
+		 		};
+			*/
+	// Ghi đè
+	// Phương thức ảo
+
+
+
+
+
+
+
+
+// Tính trừu tượng
+
+class Person {
+	public:
+ 		string name;
+   		int age;
+
+		Person() {
+  		}
+
+ 		Person(string _name, int _age, string _address) {
+   			name = _name;
+	  		age = _age;
+	 		address = _address;
+		}
+
+	 	void work() {
+   			cout << name << " is working in " << address <<endl;
+	  	}
+	private:
+ 		string address = "Ha Noi";
+};
+
+class Cat {
+	private:
+ 		string name;
+   		int age;
+	public:
+ 		Cat() {
+		}
+		Cat(string _name, int _age) {
+			name = _name;
+   			age = _age;
+	  	}
+		Cat(int age, string name) {
+			this->name = name;
+   			this->age = age;
+  		}
+
+		string get_name() {
+			return name;
+   		}
+		int get_age() {
+			return age;
+   		}
+};
+
+int main() {
+
+	Person person1;
+ 	Person person2("Truong Van An", 20, "Da Nang");
+
+  	person1.name = "Truong Van An";
+   	person1.age = 18;
+
+ 	Cat *cat = new Cat("Bo", 2);
+  	cout << "Name: " << cat->get_name() <<endl;
+   	cout << "Age:  " << (*cat).get_age() <<endl;
+
+ 	delete cat;
+
+	return 0;
+
+ }
