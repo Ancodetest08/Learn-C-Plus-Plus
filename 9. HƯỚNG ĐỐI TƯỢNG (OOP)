@@ -73,12 +73,30 @@ using namespace std;
 	   						this->y = y;
 		  				}
 						friend Point operator+(Point p1, Point p2) {
-						
-}
-
+							Point p3;
+							p3.x = p1.x + p2.x;
+							p3.y = p1.y + p2.y;
+							return p3;
+						}
 		 		};
 			*/
 	// Ghi đè
+  		/*
+	 		class Animal {
+				public:
+	 				void move() {
+						cout << "Animal move" <<endl;
+					}
+			class Dog : public Animal {
+				public:
+					void move() {
+						cout << "Dog move" <<endl;
+					}
+					void parent_move() {
+						Animal::move();
+					}
+		 	};
+		*/
 	// Phương thức ảo
 
 
