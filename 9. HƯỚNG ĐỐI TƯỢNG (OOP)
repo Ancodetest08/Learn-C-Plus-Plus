@@ -15,7 +15,7 @@ using namespace std;
 	  			// Getter
 	  			float get_side_length() {
 	  				return side_length;
-	   			
+	   			}
 	   	}
 	*/
 // Tính kế thừa
@@ -87,6 +87,7 @@ using namespace std;
 	 				void move() {
 						cout << "Animal move" <<endl;
 					}
+			};
 			class Dog : public Animal {
 				public:
 					void move() {
@@ -98,15 +99,52 @@ using namespace std;
 		 	};
 		*/
 	// Phương thức ảo
-
-
-
-
-
-
-
-
+  		/*
+	 		class Animal {
+				public:
+					virtual void sound() = 0;
+	 				virtual void move() {
+						cout << "Animal move" <<endl;
+					}
+			};
+			class Dog : public Animal {
+				public:
+					void move() {
+						cout << "Dog move" <<endl;
+					}
+		 	};
+			int main() {
+				Animal *animal = new Dog;
+				animal->move();
+				return 0;
+			}
+		*/
 // Tính trừu tượng
+	/*
+ 		class Animal {
+	  		public:
+	 			virtual void make_sound() = 0;
+	  			virtual void move() = 0;
+	   	};
+		class Cat : public  {
+			public:
+				void make_sound() {
+					cout << "Cat make sound" <<endl;
+				}
+				void move() {
+					cout << "Cat move" <<endl;
+				}
+		};
+		class Dog : public  {
+			public:
+				void make_sound() {
+					cout << "Dog make sound" <<endl;
+				}
+				void move() {
+					cout << "Dog move" <<endl;
+				}
+		};
+	*/
 
 class Person {
 	public:
