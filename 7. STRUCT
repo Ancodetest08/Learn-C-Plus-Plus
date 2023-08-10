@@ -60,6 +60,13 @@ struct Student {
 
 }
 
+struct thi_sinh {
+	char hoten[25];
+	long sobaodanh;
+	float diemToan, diemLy, diemHoa, trungbinh;
+} bachkhoa[2000], kinhte[2000], caodang[2000];
+
+
 int main() {
 
 	Student students[10] = {
