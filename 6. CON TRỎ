@@ -55,6 +55,7 @@ int main() {
 	int n, m;
 	int *a_ptr = &a;
 	int *x_ptr = reinterpret_cast<int*>(x);
+	int *ptr = NULL;
 	int **arr;
  
  	cout << &a <<endl;				// 0x6ffe14
