@@ -257,7 +257,8 @@ int main() {
 	vector<int> numbers;
 	number.push_back(1);	// Thêm phần tử vào cuối mảng
 	number.size();			// Trả về số lượng phần tử trong mảng
-	number.erase(number.begin() + 1);
+	number.erase(number.begin() + 1);	// Xoá phần tử thứ 2
+	
 
 
 
