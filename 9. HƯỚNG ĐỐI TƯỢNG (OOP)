@@ -1,4 +1,5 @@
-#inlude <iostream>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -191,6 +192,53 @@ class Cat {
    		}
 };
 
+class Point {
+	private:
+		int x;
+		int y;
+	public:
+		Point() {}
+		Point(int x, int y) {
+			this->x = x;
+			this->y = y;
+		}
+		friend void print_point(Point point);
+		friend Point operator+(Point p1, Point p2) {
+			Point p3;
+			p3.x = p1.x + p2.x;
+			p3.y = p1.y + p2.y;
+			return p3;
+		}
+};
+void print_point(Point point) {
+	cout << point.x << " " << point.y <<endl;
+}
+int main() {
+		print_point(Point(1, 2));
+		return 0;
+}
+
+
+class B;
+class A {
+	private:
+		int x = 4;
+		friend B;
+};
+class B {
+	public:
+		void print_x(A a) {
+			cout << a.x <<endl;
+		}
+};
+
+
+
+
+
+
+
+
 int main() {
 
 	Person person1;
@@ -204,6 +252,14 @@ int main() {
    	cout << "Age:  " << (*cat).get_age() <<endl;
 
  	delete cat;
+
+
+	vector<int> numbers;
+	number.push_back(1);	// Thêm phần tử vào cuối mảng
+	number.size();			// Trả về số lượng phần tử trong mảng
+	number.erase(number.begin() + 1);
+
+
 
 	return 0;
 
