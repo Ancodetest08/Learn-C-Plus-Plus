@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 // Tham Trị
 void print_message(string message) {
-	std::cout << "Message: " << message << std::endl;
+	cout << "Message: " << message <<endl;
 }
 
 // Tham Chiếu
@@ -11,16 +13,16 @@ void increment(int &x) {
 	x++;
 }
 
-void input_integer(string label, const int &x) {
-	// Read Only
-	std::cout << x << std::endl;
+// Read Only
+void input_integer(string message, const int &x) {
+	cout << x <<endl;
 }
 
 float avg(int, int);
 
 void function_a(int a, int b = 1) {
-	std::cout << "a = " << a << std::endl;
-	std::cout << "b = " << b << std::endl;
+	cout << "a = " << a <<endl;
+	cout << "b = " << b <<endl;
 }
 
 // Đệ Quy
