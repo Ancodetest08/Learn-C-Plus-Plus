@@ -3,16 +3,16 @@
 
 int main() {
 
+	int n;
+s
 	string str = "Hello World";
 	string str1 = "C++";
 	string str2 = "Hello World";
 	string str3 = "World";
 
-	int n;
 	std::cin >> n;
 	cin.ignore();
-
-	getline(cin, str);
+	getline(cin, strg);
 
 	str.substr(2, 5);				# llo W
 	str.substr(3);					# lo World
@@ -28,5 +28,5 @@ int main() {
 	tolower(str);					# hello world
 	
 	return 0;
- 
+
 }
