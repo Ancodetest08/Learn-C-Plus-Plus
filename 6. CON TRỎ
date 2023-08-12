@@ -35,10 +35,10 @@
 		}
 	*/
 
-	// Tốc độ truy suất:
-		// Stack có tốc độ truy suất nhanh hơn Heap
-	// Giới hạn lưu trữ:
-		// Stack có giới hạn lưu trữ nhỏ hơn Heap
+// Tốc độ truy suất:
+	// Stack có tốc độ truy suất nhanh hơn Heap
+// Giới hạn lưu trữ:
+	// Stack có giới hạn lưu trữ nhỏ hơn Heap
 
 #include <iostream>
 
@@ -46,27 +46,27 @@ using namespace std;
 
 void input_integer(int *x) {
 	cin >> *x;
- }
+}
 
 int main() {
 
- 	int x;
+ 	int x = 0;
 	int a = 5;
 	int n, m;
+ 	int *ptr = NULL;
 	int *a_ptr = &a;
 	int *x_ptr = reinterpret_cast<int*>(x);
-	int *ptr = NULL;
 	int **arr;
  
- 	cout << &a <<endl;				// 0x6ffe14
-  	cout << a_ptr <<endl;			// 0x6ffe14
-   	cout << *a_ptr <<endl;			// 5
+ 	cout << &a <<endl;									// 0x6ffe14
+  	cout << a_ptr <<endl;								// 0x6ffe14
+   	cout << *a_ptr <<endl;								// 5
 
 	input_integer(&x);
 
 	cin >> n >> m;
 
-	arr = new int* [n];
+	arr = new int*[n];
 	for (int i = 0; i < n; i++) {
 		arr[i] = new int[m];
 	}
