@@ -4,68 +4,53 @@
 using namespaces std;
 
 struct Date {
+
 	int date;
 	int month;
 	int year;
 
-	Date() {
-	}
+	Date() {}
 	Date(int _date, int _month, int _year) {
 		date = _date;
 		month = _month;
 		year = _year;
 	}
-}
+
+};
 
 struct Student {
-	// Properties
+
 	string name;
 	int age;
 	Date dob;
 
-	// Constructor
-	Student() {
-		cout << "Hàm khởi tạo chạy." <<endl;
-	}
+	Student() {}
 	Student(string _name, int _age, Date _dob) {
 		name = _name;
 		age = _age;
 		dob = _dob;
 	}
 
-	// Methods
 	void run() {
 		cout << "Running..." <<endl;	
 	}
 
 	friend istream& operator>>(istream &is, Student &p) {
-		cout << "Name: ";
-		is >> p.name;
-		cout << "Age: ";
-		is >> p.age;
-
+		cout << "Name: "; is >> p.name;
+		cout << "Age: "; is >> p.age;
 		return is;
 	}
 	friend ostream& operator<<(ostream &os, Student p) {
 		os << p.name << " " << p.age <<endl;
-
 		return os;
 	}
 	friend Student operator+(Student p1, Student p2) {
 		Student p3;
 		p3.age = p1.age + p2.age;
-
 		return p3;
 	}
 
-}
-
-struct thi_sinh {
-	char hoten[25];
-	long sobaodanh;
-	float diemToan, diemLy, diemHoa, trungbinh;
-} bachkhoa[2000], kinhte[2000], caodang[2000];
-
+} bachkhoa[2000], kinhte[2000];
 
 int main() {
 
@@ -76,13 +61,11 @@ int main() {
 	Student student_1;
 	Student student_2{"An", 18, Date(2, 6, 2003)};
 	Student student_3 = Student{"An", 18, Date(2, 6, 2003)};
-	Student student_4 = student_1 + student_2;
+	Student student_4 = student_2 + student_3;
 	Student *student_ptr = &student_3;
 
-	cout << "Nhập tên: ";
-	getline(cin, student_1.name);
-	cout << "Nhập tuổi: ";
-	cin >> student_1.age;
+	cout << "Nhập tên: "; getline(cin, student_1.name);
+	cout << "Nhập tuổi: "; cin >> student_1.age;
 
 	student_1.run();
 	cout << "Tên: " << student_1.name <<endl;
