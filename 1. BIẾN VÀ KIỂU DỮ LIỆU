@@ -14,11 +14,11 @@ int main() {
 
 	const double PI = 3.14;
 
-	std::cout << "Hello World!" <<std::endl;
-	std::cout << "Hello World!\n";
+	std::cout << "Hello World!" <<std::endl;									
+	std::cout << "Hello World!\n";												
 	
-	std::cout << "Nhập a = "; std::cin >> a;
-	std::cout << "Giá trị a = " << a <<std::endl;
+	std::cout << "Nhập a = "; std::cin >> a;									
+	std::cout << "Giá trị a = " << a <<std::endl;								
 	
 	std::cout << "a / 2 = " << (float)a / 2 <<std::endl;
 	
