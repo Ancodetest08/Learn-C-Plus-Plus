@@ -1,22 +1,16 @@
-#include <iostream>
-
-using namespace std;
-
 // Tính đóng gói
 	/*
  		class Square {
    			private:
 	  			float side_length;
 	  		public:
-	 			// Setter
 	 			void set_side_length(float _side_length) {
 	 				side_length = _side_length;
 	  			}
-	  			// Getter
 	  			float get_side_length() {
 	  				return side_length;
 	   			}
-	   	}
+	   	};
 	*/
 // Tính kế thừa
 	/*
@@ -27,7 +21,7 @@ using namespace std;
 	 				cout << "Animal is running..." <<endl;
 	  			}
 	   	};
-	 	class Cat : public  {
+	 	class Cat : public Animal {
    			public:
 	  			string name;
 	  			void eat() {
@@ -47,7 +41,7 @@ using namespace std;
 		// Kiểu kế thừa protected:
   			// Các thành viên public và protected của lớp cha trở thành các thành viên protected của lớp con
 		// Kiểu kế thừa private:
-  			// Các thành viên public và protected của lớp cha trở thành các thành viên private của lớp
+  			// Các thành viên public và protected của lớp cha trở thành các thành viên private của lớp con
 // Tính đa hình
 	// Nạp chồng
 		// Nạp chồng hàm
@@ -116,6 +110,7 @@ using namespace std;
 			int main() {
 				Animal *animal = new Dog;
 				animal->move();
+				delete animal;
 				return 0;
 			}
 		*/
@@ -126,7 +121,7 @@ using namespace std;
 	 			virtual void make_sound() = 0;
 	  			virtual void move() = 0;
 	   	};
-		class Cat : public  {
+		class Cat : public Animal {
 			public:
 				void make_sound() {
 					cout << "Cat make sound" <<endl;
@@ -135,7 +130,7 @@ using namespace std;
 					cout << "Cat move" <<endl;
 				}
 		};
-		class Dog : public  {
+		class Dog : public Animal {
 			public:
 				void make_sound() {
 					cout << "Dog make sound" <<endl;
@@ -146,25 +141,25 @@ using namespace std;
 		};
 	*/
 
+#include <iostream>
+
+using namespace std;
+
 class Person {
+	private:
+ 		string address = "Ha Noi";
 	public:
  		string name;
    		int age;
-
-		Person() {
-  		}
-
+		Person() {}
  		Person(string _name, int _age, string _address) {
    			name = _name;
 	  		age = _age;
 	 		address = _address;
 		}
-
 	 	void work() {
    			cout << name << " is working in " << address <<endl;
 	  	}
-	private:
- 		string address = "Ha Noi";
 };
 
 class Cat {
@@ -172,8 +167,7 @@ class Cat {
  		string name;
    		int age;
 	public:
- 		Cat() {
-		}
+ 		Cat() {}
 		Cat(string _name, int _age) {
 			name = _name;
    			age = _age;
@@ -182,7 +176,6 @@ class Cat {
 			this->name = name;
    			this->age = age;
   		}
-
 		string get_name() {
 			return name;
    		}
@@ -202,21 +195,10 @@ class Point {
 			this->y = y;
 		}
 		friend void print_point(Point point);
-		friend Point operator+(Point p1, Point p2) {
-			Point p3;
-			p3.x = p1.x + p2.x;
-			p3.y = p1.y + p2.y;
-			return p3;
-		}
 };
 void print_point(Point point) {
 	cout << point.x << " " << point.y <<endl;
 }
-int main() {
-		print_point(Point(1, 2));
-		return 0;
-}
-
 
 class B;
 class A {
@@ -231,17 +213,10 @@ class B {
 		}
 };
 
-
-
-
-
-
-
-
 int main() {
 
 	Person person1;
- 	Person person2("Truong Van An", 20, "Da Nang");
+ 	Person person2("Nguyen Van A", 20, "Da Nang");
 
   	person1.name = "Truong Van An";
    	person1.age = 18;
@@ -249,15 +224,8 @@ int main() {
  	Cat *cat = new Cat("Bo", 2);
   	cout << "Name: " << cat->get_name() <<endl;
    	cout << "Age:  " << (*cat).get_age() <<endl;
-
  	delete cat;
-
-
-
-	
-
-
 
 	return 0;
 
- }
+}
