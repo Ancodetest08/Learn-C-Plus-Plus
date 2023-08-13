@@ -9,22 +9,16 @@ int main() {
 	ifstream ifs;
 	ofstream ofs;
 
-	fs.open("C:\\Users\\an\\Desktop\\cpp_learning\\test.txt");
-	ifs.open("test.txt");
-	ofs.open("test.txt");
+	fs.open("C:\\Users\\an\\Desktop\\cpp_learning\\test_1.txt");
+	ifs.open("test_2.txt");
+	ofs.open("test_3.txt");
 	
-	// Mở file ở chế độ đọc nếu file đã tồn tại
-	fs.open("test1.txt", ios::in);
-	// Mở file ở chế độ ghi và xoá hết nội dung trong file, nếu file không tồn tại thì sẽ tạo file
-	fs.open("test2.txt", ios::out);
-	// Mở file ở chế độ ghi và xoá hết nội dung trong file, nếu file không tồn tại thì sẽ tạo file
-	fs.open("test3.txt", ios::out | ios::trunc);
-	// Mở file ở chế độ ghi và sẽ chỉ ghi vào cuối chứ không xoá các dữ liệu cũ
-	fs.open("test4.txt", ios::out | ios::app);
-	// Mở file và di chuyển con trỏ xuống cuối file
-	fs.open("test5.txt", ios::in | ios::ate);
-	// Làm việc với file nhị phân
-	fs.open("test6.txt", ios::out | ios::binary);
+	fs.open("test1.txt", ios::in);										// Mở file ở chế độ đọc nếu file đã tồn tại
+	fs.open("test2.txt", ios::out);										// Mở file ở chế độ ghi và xoá hết nội dung trong file, nếu file không tồn tại thì sẽ tạo file
+	fs.open("test3.txt", ios::out | ios::trunc);						// Mở file ở chế độ ghi và xoá hết nội dung trong file, nếu file không tồn tại thì sẽ tạo file
+	fs.open("test4.txt", ios::out | ios::app);							// Mở file ở chế độ ghi và sẽ chỉ ghi vào cuối chứ không xoá các dữ liệu cũ
+	fs.open("test5.txt", ios::in | ios::ate);							// Mở file và di chuyển con trỏ xuống cuối file
+	fs.open("test6.txt", ios::out | ios::binary);						// Làm việc với file nhị phân
 
 	if (fs.is_open()) {
 		cout << "Mở File thành công" <<endl;
@@ -43,9 +37,10 @@ int main() {
 	ifs.open("test.bin", ios::binary);
 	int read_n;
 	ifs.read((char*)&read_n, sizeof(int));
-	cout << read_n;
+	cout << read_n <<endl;
 	ifs.close();
 
+	ofstream ofs;
 	int n = 3;
 	float numbers[n] = {1.2, 1.3, 1.4};
 	ofs.write((char*)&n, sizeof(int));
@@ -60,6 +55,7 @@ int main() {
 	for (int i = 0; i < read_n; i++) {
 		cout << read_numbers[i] << " ";
 	}
+	ifs.close();
 
 	return 0;
  
