@@ -5,6 +5,7 @@ int main() {
 
 	int n;
 	string strg;
+	string str_n = to_string(n);
 	string str = "Hello World";
 	string str1 = "C++";
 	string str2 = "H***World";
