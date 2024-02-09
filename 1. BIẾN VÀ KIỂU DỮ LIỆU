@@ -14,30 +14,30 @@ int main() {
 
 	const double PI = 3.14;
 
-	std::cout << "Hello World!" <<std::endl;									
+	std::cout << "Hello World!" << std::endl;									
 	std::cout << "Hello World!\n";												
 	
 	std::cout << "Nhập a = "; std::cin >> a;									
-	std::cout << "Giá trị a = " << a <<std::endl;								
+	std::cout << "Giá trị a = " << a << std::endl;								
 	
-	std::cout << "a / 2 = " << (float)a / 2 <<std::endl;
+	std::cout << "a / 2 = " << (float)a / 2 << std::endl;
 	
-	std::cout << "Trị tuyệt đối của a = " << abs(a) <<std::endl;
-	std::cout << "Căn bậc hai của a = " << sqrt(a) <<std::endl;
-	std::cout << "Luỹ thừa của a và b = " << pow(a, b) <<std::endl;
+	std::cout << "Trị tuyệt đối của a = " << abs(a) << std::endl;
+	std::cout << "Căn bậc hai của a = " << sqrt(a) << std::endl;
+	std::cout << "Luỹ thừa của a và b = " << pow(a, b) << std::endl;
 
-	std::cout << "Min int: " << INT_MIN <<std::endl;
-	std::cout << "Max int: " << INT_MAX <<std::endl;
-	std::cout << "Min short: " << SHRT_MIN <<std::endl;
-	std::cout << "Max short: " << SHRT_MAX <<std::endl;
-	std::cout << "Min long: " << LONG_MIN <<std::endl;
-	std::cout << "Max long: " << LONG_MAX <<std::endl;
+	std::cout << "Min int: " << INT_MIN << std::endl;
+	std::cout << "Max int: " << INT_MAX << std::endl;
+	std::cout << "Min short: " << SHRT_MIN << std::endl;
+	std::cout << "Max short: " << SHRT_MAX << std::endl;
+	std::cout << "Min long: " << LONG_MIN << std::endl;
+	std::cout << "Max long: " << LONG_MAX << std::endl;
 
-	std::cout << "Int: " << sizeof(int) <<std::endl;
-	std::cout << "Float: " << sizeof(float) <<std::endl;
-	std::cout << "Double: " << sizeof(double) <<std::endl;
-	std::cout << "Char: " << sizeof(char) <<std::endl;
-	std::cout << "Bool: " << sizeof(bool) <<std::endl;
+	std::cout << "Int: " << sizeof(int) << std::endl;
+	std::cout << "Float: " << sizeof(float) << std::endl;
+	std::cout << "Double: " << sizeof(double) << std::endl;
+	std::cout << "Char: " << sizeof(char) << std::endl;
+	std::cout << "Bool: " << sizeof(bool) << std::endl;
 
 	return 0;
 
