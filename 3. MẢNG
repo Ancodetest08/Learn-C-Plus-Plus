@@ -9,8 +9,8 @@ int main() {
 		{4, 5, 6}
 	}; 
 
-	std::cout << numbers_one[1] << std::endl;						// 2
-	std::cout << numbers_two[1][2] << std::endl;					// 6
+	std::cout << numbers_one[1] <<std::endl;						// 2
+	std::cout << numbers_two[1][2] <<std::endl;						// 6
 	
 	vector<int> numbers;
 	numbers.push_back(1);											// [1]
