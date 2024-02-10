@@ -26,9 +26,6 @@ int main() {
 		cout << "Mở File thất bại" <<endl;
   	}
 
-	int n = 5;
-	fs.write((char*)&n, sizeof(int));
-
    	fs.close();
 	ifs.close();
 	ofs.close();
