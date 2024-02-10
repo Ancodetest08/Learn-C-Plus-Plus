@@ -152,6 +152,7 @@ class Person {
  		string name;
    		int age;
 		Person() {}
+		Person(string name, int age) : name(name), age(age) {}
  		Person(string _name, int _age, string _address) {
    			name = _name;
 	  		age = _age;
